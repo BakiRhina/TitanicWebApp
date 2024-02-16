@@ -4,7 +4,7 @@ main_bp = Blueprint('main', __name__)
 
 @main_bp.route('/')
 def index():
-    return render_template('index.html', result=None)
+    return render_template('home.html', result=None)
 
 @main_bp.route('/process_form', methods=['POST'])
 def process_form():
@@ -16,4 +16,4 @@ def process_form():
     # For demonstration purposes, let's just echo the data
     result_message = f"Survived Titanic? Sex: {sex}, Cabin: {cabin}, Age: {age}"
 
-    return render_template('index.html', result=result_message)
+    return render_template('home.html', result=result_message)
