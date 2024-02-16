@@ -17,3 +17,4 @@ def process_form():
     result_message = f"Survived Titanic? Sex: {sex}, Cabin: {cabin}, Age: {age}"
 
     return render_template('home.html', result=result_message)
+  

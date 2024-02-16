@@ -15,24 +15,24 @@
   <form action="/process_form" method="post">
     <p>
       <label for="sex">Sex</label><br>
-      <select id="sex">
+      <select id="sex" name="sex">
         <option value="female">Female</option>
         <option value="male">Male</option>
       </select><br>
     </p>
     <p>
       <label for="cabin">Cabin</label><br>
-      <select id="cabin">
+      <select id="cabin" name="cabin">
         <option value="yes">I'd have had a cabin</option>
         <option value="no">Nah</option>
       </select><br>
     </p>
     <p>
       <label for="age">Your age</label><br>
-      <input type="number" id="age" min="0" max="100"><br>
+      <input type="number" name="age" id="age" min="0" max="100"><br>
     </p>  
     <div>
-      <button>Let's Go</button>
+      <input type="submit" value="Let's go">
     </div>
   </form>
 </body>
