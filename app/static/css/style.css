@@ -1,7 +1,12 @@
 body {
+  background-color: #212121;
   align-items: center;
   text-align: center;
   justify-content: center;
   display: flex;
   height: 100vh;
+}
+
+form {
+  color: #F6F6F6;
 }
