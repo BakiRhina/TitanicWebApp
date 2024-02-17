@@ -1,10 +1,9 @@
 from flask import Blueprint, render_template, request
-from model_utils import Model
-from ....TitanicWebApp.config import rf_model_path
+from .model_utils import Model
+from config import rf_model_path
 
 
-main_bp = Blueprint('main', __name__)
-model = Model(rf_model_path)
+main_bp = Blueprint('mai    n', __name__)
 
 @main_bp.route('/')
 def index():
@@ -12,6 +11,7 @@ def index():
 
 @main_bp.route('/process_form', methods=['POST'])
 def process_form():
+    model = Model(rf_model_path)
     sex = request.form.get('sex')
     cabin = request.form.get('cabin')
     age = request.form.get('age')
