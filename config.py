@@ -1,0 +1,1 @@
+rf_model_path = "C:/Users/Ato/Documents/Programming/WebDev/TitanicWebApp/app/static/models/rf79.joblib"
