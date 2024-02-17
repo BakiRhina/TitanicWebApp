@@ -6,9 +6,13 @@ class Model():
   def __init__(self, model_path):
     self.model = self._load_model(model_path)
 
-
+  def get_prediction(self, input_data):
+    numpy_data = self._process_data(input_data)
+    prediction = self.model.predict(numpy_data)
+    answer = 'yes' if prediction else 'no'
+    return answer
   
-  def process_data(self, data_list):
+  def _process_data(self, data_list):
     # 1. data_list comes as: [sex, fare, cabin]
     # 2. The model was trained using the following order of features:
     # [passengerId, pclass, sex, fare, cabin]
@@ -21,11 +25,7 @@ class Model():
     data_def = [passengerId, pclass, data[0], data[1], data[2]]
     return np.array([data_def])
   
-  def get_prediction(self, ndarray_values):
-    prediction = self.model.predict(ndarray_values)
-    
-    return prediction
-
+  
   def _load_model(self, model_path):
     with open(model_path, 'rb') as file:
       model = joblib.load(file)
