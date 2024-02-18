@@ -11,25 +11,27 @@
     <form action="/process_form" method="post">
       <p>
         <label for="sex">Sex</label><br>
-        <select id="sex" name="sex">
+        <select id="sex" name="sex" class="boxStyle" aria-placeholder="">
+          <option value="" disabled selected></option>
           <option value="1">Female</option>
           <option value="0">Male</option>
         </select><br>
       </p>
       <p>
         <label for="cabin">Cabin</label><br>
-        <select id="cabin" name="cabin">
+        <select id="cabin" name="cabin" class="boxStyle">
+          <option value="" disabled selected></option>
           <option value="1">I'd have had a cabin</option>
           <option value="0">Nah</option>
         </select><br>
       </p>
       <p>
         <label for="age">Your age</label><br>
-        <input type="number" name="age" id="age" min="0" max="100" required><br>
+        <input type="number" name="age" id="age" class="boxStyle" min="0" max="100" required><br>
       </p>
       <p>
         <label for="fare">How much would you have payed?</label><br>
-        <input type="number" name="fare" id="fare" min="0" max="300" required><br>
+        <input type="number" name="fare" id="fare" class="boxStyle" min="0" max="300" required>
       </p>
       <div>
         <input type="submit" value="Let's go" id="submitBtn">
