@@ -22,16 +22,6 @@ select {
   font-size: 2.5vh;
 }
 
-#answerDiv {
-  height: 100%;
-  width: 50vw;
-  background-color: #F5E8C7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 #submitBtn {
   font-family: 'Courier New', Courier, monospace;
   background-color: #818FB4; /* Green background color */
@@ -40,6 +30,11 @@ select {
   cursor: pointer; /* Add a pointer cursor on hover */
   border: none; /* Remove the default border */
   border-radius: 5px; /* Add a slight border-radius for a rounded appearance */
+  transition: padding 0.2s;
+}
+
+#submitBtn:hover {
+  padding: 3vh 5vh;
 }
 
 .boxStyle {
@@ -48,4 +43,19 @@ select {
   box-sizing: border-box; /* Include padding and border in the total width/height */
   margin-bottom: 5vh;
   margin-top: 2vh;
+}
+
+
+
+/********* ANSWER DIV ***********/
+
+#answerDiv {
+  height: 100%;
+  width: 50vw;
+  background-color: #F5E8C7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
