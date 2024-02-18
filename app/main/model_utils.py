@@ -12,6 +12,7 @@ class Model():
     answer = 'yes' if prediction else 'no'
     return answer
   
+
   def _process_data(self, data_list):
     # 1. data_list comes as: [sex, fare, cabin]
     # 2. The model was trained using the following order of features:
@@ -20,11 +21,16 @@ class Model():
     #SAME features in the same order.
 
     data = data_list
+
+    sex = int(data[0]) # String to int/bool
+    fare = float(data[1]) # String to float
+    cabin = int(data[2]) # String to int
+
     passengerId = 400 #FIXME - To be removed
-    pclass = self._get_pclass(data[1])
-    data_def = [passengerId, pclass, data[0], data[1], data[2]]
+    pclass = self._get_pclass(fare)
+
+    data_def = [passengerId, pclass, sex, fare, cabin]
     return np.array([data_def])
-  
   
   def _load_model(self, model_path):
     with open(model_path, 'rb') as file:

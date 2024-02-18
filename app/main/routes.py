@@ -25,8 +25,7 @@ def process_form():
     #SAME features in the same order.
 
     input_data = [sex, fare, cabin]
-    numpy_data = model.process_data(input_data)
-    answer = model.get_prediction(numpy_data)
+    answer = model.get_prediction(input_data)
 
 
     # Perform operations with the received data
