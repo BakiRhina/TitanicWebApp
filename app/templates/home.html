@@ -39,15 +39,18 @@
     </form>
   </div>
   <div id="answerDiv">
-    <h1>
-      Would you have survived the Titanic?
-    </h1>
-    {% if result %}
-      <div id="result">
-          <p>{{ result }}</p>
-      </div>  
-    {% endif %}
+    <div id="headerDiv">
+      <h1>
+        Would you have survived the Titanic?
+      </h1>
+    </div>
+    <div id="containerOfDynamicDiv">
+      {% if result %}
+        <div id="result">
+            <p>{{ result }}</p>
+        </div>  
+      {% endif %}
+    </div>
   </div>
-
 </body>
 </html>

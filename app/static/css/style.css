@@ -5,9 +5,8 @@ body {
   height: 100vh;
 }
 
-select {
-  font-family:'Courier New', Courier, monospace;
-}
+
+/************** FORM DIVISION *************/
 
 #formDiv {
   height: 100%;
@@ -20,6 +19,10 @@ select {
   font-family: 'Courier New', Courier, monospace;
   color: #F6F6F6;
   font-size: 2.5vh;
+}
+
+select {
+  font-family:'Courier New', Courier, monospace;
 }
 
 #submitBtn {
@@ -55,7 +58,23 @@ select {
   background-color: #F5E8C7;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+#headerDiv {
+  height: 50vh;
+  width: 100%;
+}
+
+#containerOfDynamicDiv {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+}
+
+h1 {
+  margin-top: 10vh;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
 }
