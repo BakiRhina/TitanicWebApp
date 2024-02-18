@@ -12,9 +12,34 @@ form {
 #formDiv {
   height: 100%;
   width: 50vw;
-  background-color: aqua;
+  background-color: #363062;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+#answerDiv {
+  height: 100%;
+  width: 50vw;
+  background-color: #F5E8C7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#submitBtn {
+  background-color: #818FB4; /* Green background color */
+  color: white; /* White text color */
+  padding: 10px 15px; /* Add padding to the submit button */
+  font-size: 16px; /* Set the font size */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border: none; /* Remove the default border */
+  border-radius: 5px; /* Add a slight border-radius for a rounded appearance */
+}
+
+label {
+  display: block; /* Make labels block elements to ensure proper spacing */
+  margin-bottom: 5px; /* Add space below each label */
 }
