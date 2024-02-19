@@ -4,7 +4,7 @@ import numpy as np
 
 class Model():
   def __init__(self, model_path):
-    self.model = self._load_model(model_path)
+    self.model = self._load_model(model_path) # Import model
 
   def get_prediction(self, input_data):
     processed_data = self._process_data(input_data)

@@ -5,14 +5,14 @@ from config import rf_model_path
 # initialize model
 model = Model(rf_model_path)
 
-main_bp = Blueprint('mai    n', __name__)
+main_bp = Blueprint('main', __name__)
 
 @main_bp.route('/')
 def index():
 
     return render_template('home.html', result=None)
 
-@main_bp.route('/process_form', methods=['POST'])
+@main_bp.route('/', methods=['POST'])
 def process_form():
     sex = request.form.get('sex')
     cabin = request.form.get('cabin')
