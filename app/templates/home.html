@@ -44,18 +44,19 @@
         Would you have survived the Titanic?
       </h1>
     </div>
+    <div id="containerResultDiv">
+      {% if result %}
+        <div>
+            <p id="result">{{ result }}</p>
+            <p id="survivalText">% of survival</p>
+        </div>  
+      {% endif %}
+    </div>
     <div id="containerResultTextDiv">
       {% if result%}
         <div id="resultText">
           <h3>{{ resultText }}</h3>
         </div>
-      {% endif %}
-    </div>
-    <div id="containerResultDiv">
-      {% if result %}
-        <div id="result">
-            <p>{{ result }}</p>
-        </div>  
       {% endif %}
     </div>
   </div>

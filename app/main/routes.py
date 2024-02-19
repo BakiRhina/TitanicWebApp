@@ -27,7 +27,6 @@ def process_form():
     #SAME features in the same order.
 
     result_text, prob_yes = model.get_prediction(input_data)
-    result_prob = f"{prob_yes}%"
 
-    return render_template('home.html', result=result_prob, resultText = result_text)
+    return render_template('home.html', result=prob_yes, resultText = result_text)
   

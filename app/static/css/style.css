@@ -91,5 +91,15 @@ h1 {
 
 #result {
   font-family: 'Courier New', Courier, monospace;
+  font-size: 10vh;
+}
+
+#survivalText {
+  font-size: 2vh;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h3 {
+  font-family: 'Courier New', Courier, monospace;
   font-size: large;
 }
