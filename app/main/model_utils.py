@@ -7,12 +7,11 @@ class Model():
     self.model = self._load_model(model_path)
 
   def get_prediction(self, input_data):
-    numpy_data = self._process_data(input_data)
-    prediction = self.model.predict(numpy_data)
-    probability = self.model.predict_proba(numpy_data)
-    prob_yes = probability[0][1]
-    answer = 'yes' if prediction else 'no'
-    return answer, prob_yes
+    processed_data = self._process_data(input_data)
+    bool_pred, prob_yes  = self._predict(processed_data) # bool prediction not used at the moment
+    answer = self._get_result_text(prob_yes)
+
+    return answer, prob_yes # answer is a STRING, prob_yes is a FLOAT
   
 
   def _process_data(self, data_list):
@@ -47,6 +46,23 @@ class Model():
     else:
       return 3
     
-
+  def _get_result_text(self, prob_yes):
+    if prob_yes >= 50.0:
+      text = 'Good job surviving!   :)'
+      return text
+    elif prob_yes > 30.0 and prob_yes <50:
+      text = 'Almost there!'
+      return text
+    else:
+      text = ':('
+      return text
+    
+  def _predict(self, data):
+    binary_prediction = self.model.predict(data) # Get 1 (survived) or 0 (deceased)
+    probability_prediction = self.model.predict_proba(data) # Returns array([[0_prob, 1_prob]])
+    prob_yes = round(probability_prediction[0][1]*100, 2)
+    
+    return binary_prediction, prob_yes
+  
 
   
