@@ -25,12 +25,11 @@ def process_form():
     #SAME features in the same order.
 
     input_data = [sex, fare, cabin]
-    answer = model.get_prediction(input_data)
-
+    answer, prob_yes = model.get_prediction(input_data)
 
     # Perform operations with the received data
     # For demonstration purposes, let's just echo the data
-    result_message = f"Survived Titanic? {answer}"
+    result_message = f"Survived: {answer} Prob: {prob_yes}"
 
     return render_template('home.html', result=result_message)
   

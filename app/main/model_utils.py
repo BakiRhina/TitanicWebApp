@@ -9,8 +9,10 @@ class Model():
   def get_prediction(self, input_data):
     numpy_data = self._process_data(input_data)
     prediction = self.model.predict(numpy_data)
+    probability = self.model.predict_proba(numpy_data)
+    prob_yes = probability[0][1]
     answer = 'yes' if prediction else 'no'
-    return answer
+    return answer, prob_yes
   
 
   def _process_data(self, data_list):
@@ -26,7 +28,7 @@ class Model():
     fare = float(data[1]) # String to float
     cabin = int(data[2]) # String to int
 
-    passengerId = 400 #FIXME - To be removed
+    passengerId = 0 #FIXME - To be removed
     pclass = self._get_pclass(fare)
 
     data_def = [passengerId, pclass, sex, fare, cabin]

@@ -63,12 +63,20 @@ select {
 }
 
 #h1Div {
-  height: 50vh;
+  height: 30vh;
   width: 100%;
 }
 
-#containerOfDynamicDiv {
+#containerResultDiv {
   height: 50vh;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+#containerResultTextDiv {
+  height: 20vh;
   width: 100%;
   display: flex;
   text-align: center;
